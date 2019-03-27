@@ -1,3 +1,5 @@
+import React from 'react';
+
 const business = {
   imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
   name: 'MarginOtto Pizzeria',
@@ -8,4 +10,4 @@ const business = {
   category: 'Italian',
   rating: 4.5,
   reviewCount: 90
-}
+};
