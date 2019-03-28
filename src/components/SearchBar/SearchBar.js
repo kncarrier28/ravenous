@@ -56,6 +56,18 @@ class SearchBar extends React.Component {
       sortBy: sortByOption
     })
   }
+
+  handleTermChange(event) {
+    this.setState({
+      term: event.target.value
+    });
+  }
+
+  handleLocationChange(event) {
+    this.setState({
+      location: event.target.value
+    });
+  }
 }
 
 export default SearchBar;
