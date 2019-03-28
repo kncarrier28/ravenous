@@ -9,8 +9,10 @@ const Yelp = {
     }).then(response => {
       return response.json();
     }).then(jsonResponse => {
-      if (jsonResponse.business) {
-        return jsonResponse.business.map(business => {
+      if (jsonResponse.businesses) {
+        return jsonResponse.businesses.map(business => {
+          console.log(business.name)
+          const category = (business.categories.length == 0) ? '' : business.categories[0].title;
           return {
             id: business.id,
             imageSrc: business.image_url,
@@ -19,7 +21,7 @@ const Yelp = {
             city: business.location.city,
             state: business.location.state,
             zipCode: business.location.cip_code,
-            category: business.categories[0].title,
+            category: category,
             rating: business.rating,
             reviewCount: business.review_count
           }
